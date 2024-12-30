@@ -1,0 +1,15 @@
+type Answer {
+    questionId: ID!
+    optionId: ID!
+    isCorrect: Boolean!
+}
+
+extend type Mutation {
+    SubmitAnswer(questionId: ID!, optionId: ID!): AnswerResponse
+}
+
+type AnswerResponse {
+    message: String!
+    status: Int!
+    data: Answer
+}

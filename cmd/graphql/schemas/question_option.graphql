@@ -1,0 +1,13 @@
+type QuestionOption {
+    id: ID!
+    questionId: ID!
+    title: String!
+    isCorrect: Boolean!
+    createdAt: Time!
+    updatedAt: Time!
+}
+
+input QuestionOptionInput {
+    title: String!
+    isCorrect: Boolean!
+}
